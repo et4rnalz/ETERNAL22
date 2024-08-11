@@ -1,0 +1,90 @@
+html {
+    --primary: #3a0d66;
+    --accent: #822fa9;
+    --background: #1e1e1e;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: #f5f5f5;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--background) url('img/bg-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 2rem;
+}
+
+header.intro {
+    background-color: rgba(30, 30, 30, 0.85);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: var(--accent);
+}
+
+header p {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: rgba(30, 30, 30, 0.85);
+    cursor: pointer;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    border: 2px solid var(--accent);
+    border-radius: 15px;
+    color: #f5f5f5;
+    font-size: 1.25rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.link:hover {
+    background-color: var(--accent);
+    transform: scale(1.05);
+}
+
+.link img {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    width: 20px; /* Reduced image size */
+    height: 20px; /* Reduced image size */
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--accent); }
+}
